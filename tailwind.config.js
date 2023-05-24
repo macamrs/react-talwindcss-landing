@@ -9,7 +9,7 @@ export default {
         secondary: "#071629",
       },
       backgroundImage: {
-        "hero-section": "url('./assets/hero.svg')",
+        "hero-section": "url('./assets/hero.png')",
       },
     },
   },

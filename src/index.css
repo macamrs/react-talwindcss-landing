@@ -16,5 +16,49 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* @layer components {
-} */
+@layer components {
+  /* Navbar */
+  .navbar {
+    @apply fixed top-0 w-full;
+  }
+
+  /* Videos cards */
+  .video-card-container {
+    @apply rounded-md;
+  }
+
+  /* Navbar links */
+  .navbar-menu-links {
+    @apply font-bold text-xs text-white uppercase pr-[3.25rem];
+  }
+
+  /* Hero Section - pros container */
+  .pros-container {
+    @apply flex flex-col justify-center items-center gap-2;
+  }
+
+  /* Hero Section container - styling for background image */
+  .hero-bg-image {
+    @apply bg-hero-section bg-origin-border bg-center	bg-no-repeat bg-cover  h-screen;
+  }
+
+  /* Hero section tags */
+  .hero-tags {
+    @apply font-bold text-base text-white uppercase;
+  }
+
+  /* Purple text highlight */
+  .purple-text-highlight {
+    @apply font-bold text-[2rem] leading-10 text-purple;
+  }
+
+  /* CTA Card */
+  .cta-card {
+    @apply flex flex-col justify-center items-center text-center text-white w-52 gap-4;
+  }
+
+  /* Register CTA button */
+  .register-btn {
+    @apply bg-purple rounded-[22px] py-3 px-5 uppercase text-white text-sm font-semibold;
+  }
+}

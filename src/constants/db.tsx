@@ -13,25 +13,48 @@ import video3 from '../assets/videos/video3.svg';
 import video4 from '../assets/videos/video4.svg';
 import video5 from '../assets/videos/video5.svg';
 
+import contentCreator from '../assets/content-creator.svg';
+
 const testimonial = [
   {
     id: 1,
     img: testimony1,
-    testimony: 'Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun!',
+    testimony: '« Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun! »',
     userName: 'Person Name',
     occupation: 'Weather presenter'
   },
   {
     id: 2,
     img: testimony2,
-    testimony: 'Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun!',
+    testimony: '« Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun! »',
     userName: 'Person Name',
     occupation: 'Entrepreneur'
   },
   {
     id: 3,
     img: testimony3,
-    testimony: 'Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun!',
+    testimony: '« Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun! »',
+    userName: 'Person Name',
+    occupation: 'Web developer'
+  },
+  {
+    id: 4,
+    img: testimony1,
+    testimony: '« Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun! »',
+    userName: 'Person Name',
+    occupation: 'Web developer'
+  },
+  {
+    id: 5,
+    img: testimony2,
+    testimony: '« Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun! »',
+    userName: 'Person Name',
+    occupation: 'Web developer'
+  },
+  {
+    id: 6,
+    img: testimony3,
+    testimony: '« Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun! »',
     userName: 'Person Name',
     occupation: 'Web developer'
   },
@@ -44,10 +67,10 @@ const popularTutorials = [
     videoTitle: 'Diagonal Smile',
     videoDescription: 'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.',
     contentCreatorInfo: {
-      creatorImg: '',
+      creatorImg: contentCreator,
       creatorName: 'Phillip Massey',
-      videoLenght: '',
-      fullStars: ''      
+      videoLenght: '12 min',
+      fullStars: 4,      
     }
   },
   {
@@ -56,10 +79,10 @@ const popularTutorials = [
     videoTitle: 'Sad Smile',
     videoDescription: 'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.',
     contentCreatorInfo: {
-      creatorImg: '',
+      creatorImg: contentCreator,
       creatorName: 'Phillip Massey',
-      videoLenght: '',
-      fullStars: ''      
+      videoLenght: '8 min',
+      fullStars: 3,     
     }
   },
   {
@@ -68,10 +91,10 @@ const popularTutorials = [
     videoTitle: 'Natural Smile',
     videoDescription: 'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.',
     contentCreatorInfo: {
-      creatorImg: '',
+      creatorImg: contentCreator,
       creatorName: 'Phillip Massey',
-      videoLenght: '',
-      fullStars: ''      
+      videoLenght: '10 min',
+      fullStars: 5,    
     }
   },
   {
@@ -80,10 +103,10 @@ const popularTutorials = [
     videoTitle: 'Happy Smile',
     videoDescription: 'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.',
     contentCreatorInfo: {
-      creatorImg: '',
+      creatorImg: contentCreator,
       creatorName: 'Phillip Massey',
-      videoLenght: '',
-      fullStars: ''      
+      videoLenght: '12 min',
+      fullStars: 4      
     }
   },
   {
@@ -92,10 +115,10 @@ const popularTutorials = [
     videoTitle: 'Inverted Smile',
     videoDescription: 'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.',
     contentCreatorInfo: {
-      creatorImg: '',
+      creatorImg: contentCreator,
       creatorName: 'Phillip Massey',
-      videoLenght: '',
-      fullStars: ''      
+      videoLenght: '8 min',
+      fullStars: 3,      
     }
   },
 ];
@@ -107,10 +130,10 @@ const latestVideos = [
     videoTitle: 'Inverted Smile',
     videoDescription: 'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.',
     contentCreatorInfo: {
-      creatorImg: '',
+      creatorImg: contentCreator,
       creatorName: 'Phillip Massey',
-      videoLenght: '',
-      fullStars: ''      
+      videoLenght: '8 min',
+      fullStars: '3'      
     }
   },
   {
@@ -119,10 +142,10 @@ const latestVideos = [
     videoTitle: 'Sad Smile',
     videoDescription: 'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.',
     contentCreatorInfo: {
-      creatorImg: '',
+      creatorImg: contentCreator,
       creatorName: 'Phillip Massey',
-      videoLenght: '',
-      fullStars: ''      
+      videoLenght: '8 min',
+      fullStars: '3'      
     }
   },
   {
@@ -133,8 +156,8 @@ const latestVideos = [
     contentCreatorInfo: {
       creatorImg: '',
       creatorName: 'Phillip Massey',
-      videoLenght: '',
-      fullStars: ''      
+      videoLenght: '10 min',
+      fullStars: '5'      
     }
   },
   {
@@ -143,10 +166,10 @@ const latestVideos = [
     videoTitle: 'Happy Smile',
     videoDescription: 'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.',
     contentCreatorInfo: {
-      creatorImg: '',
+      creatorImg: contentCreator,
       creatorName: 'Phillip Massey',
-      videoLenght: '',
-      fullStars: ''      
+      videoLenght: '12 min',
+      fullStars: '4'      
     }
   },
   {
@@ -155,10 +178,10 @@ const latestVideos = [
     videoTitle: 'Diagonal Smile',
     videoDescription: 'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.',
     contentCreatorInfo: {
-      creatorImg: '',
+      creatorImg: contentCreator,
       creatorName: 'Phillip Massey',
-      videoLenght: '',
-      fullStars: ''      
+      videoLenght: '12 min',
+      fullStars: '4'      
     }
   },
 ];

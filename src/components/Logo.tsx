@@ -3,9 +3,9 @@ import smileTitle from '../assets/SmileSchool.svg';
 
 export const Logo = () => {
   return (
-    <div>
-    <img src={smile} alt="" />
-    <img src={smileTitle} alt="" />
-  </div>
+    <div className='flex'>
+      <img className='mr-[1.125rem]' src={smile} alt="" />
+      <img src={smileTitle} alt="" />
+    </div>
   )
 }
