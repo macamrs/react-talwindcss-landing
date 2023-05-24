@@ -154,7 +154,7 @@ const latestVideos = [
     videoTitle: 'Natural Smile',
     videoDescription: 'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.',
     contentCreatorInfo: {
-      creatorImg: '',
+      creatorImg: contentCreator,
       creatorName: 'Phillip Massey',
       videoLenght: '10 min',
       fullStars: '5'      

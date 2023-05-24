@@ -23,13 +23,17 @@ body {
   }
 
   /* Videos cards */
-  .video-card-container {
-    @apply rounded-md;
+  .video-card_container {
+    @apply rounded-md bg-white h-full max-w-[24rem] px-8;
+  }
+
+  .video-card_text {
+    @apply px-3 py-5;
   }
 
   /* Navbar links */
   .navbar-menu-links {
-    @apply font-bold text-xs text-white uppercase pr-[3.25rem];
+    @apply font-bold text-xs text-white uppercase;
   }
 
   /* Hero Section - pros container */
@@ -39,7 +43,7 @@ body {
 
   /* Hero Section container - styling for background image */
   .hero-bg-image {
-    @apply bg-hero-section bg-origin-border bg-center	bg-no-repeat bg-cover  h-screen;
+    @apply bg-hero-section bg-origin-border bg-center bg-top	bg-no-repeat bg-cover  h-screen;
   }
 
   /* Hero section tags */
