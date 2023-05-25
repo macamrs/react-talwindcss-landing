@@ -16,15 +16,20 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.slick-slider {
+  display: flex !important; 
+  z-index: 0 !important;
+}
+
 @layer components {
   /* Navbar */
   .navbar {
-    @apply fixed top-0 w-full;
+    @apply fixed top-0 w-full transition-colors duration-150 ease-linear bg-transparent z-50;
   }
 
   /* Videos cards */
   .video-card_container {
-    @apply rounded-md bg-white h-full max-w-[24rem] px-8;
+    @apply bg-white h-full w-6 max-w-full px-8 py-4;
   }
 
   .video-card_text {
@@ -33,17 +38,22 @@ body {
 
   /* Navbar links */
   .navbar-menu-links {
-    @apply font-bold text-xs text-white uppercase;
+    @apply font-bold text-xs text-white uppercase transition-all duration-700 ease-in hover:underline hover:underline-offset-4 hover:cursor-pointer;
+  }
+
+  /* Navbar links responsive */
+  .navbar-menu-links-responsive {
+    @apply font-bold text-sm text-white uppercase;
   }
 
   /* Hero Section - pros container */
-  .pros-container {
+  .pros-card {
     @apply flex flex-col justify-center items-center gap-2;
   }
 
   /* Hero Section container - styling for background image */
   .hero-bg-image {
-    @apply bg-hero-section bg-origin-border bg-center bg-top	bg-no-repeat bg-cover  h-screen;
+    @apply bg-hero-section bg-secondary bg-origin-border bg-top bg-no-repeat md:bg-cover h-full lg:h-screen;
   }
 
   /* Hero section tags */
@@ -63,6 +73,6 @@ body {
 
   /* Register CTA button */
   .register-btn {
-    @apply bg-purple rounded-[22px] py-3 px-5 uppercase text-white text-sm font-semibold;
+    @apply bg-purple rounded-[22px] py-3 px-5 uppercase text-white text-sm font-semibold transition-all duration-100 ease-linear hover:bg-secondary-hover;
   }
 }

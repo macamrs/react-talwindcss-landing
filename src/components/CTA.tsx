@@ -4,9 +4,9 @@ import { RegisterBtn } from "./RegisterBtn";
 export const CTA = () => {
   return (
     <section className="bg-secondary">
-      <div className="container mx-auto py-[4.375rem] flex flex-col justify-center items-center gap-y-16">
+      <div className="container mx-auto py-[4.375rem] flex flex-col justify-center items-center px-2 gap-y-16">
         <h2 className="text-white text-[2rem] font-light"><span className="purple-text-highlight">Free</span> membership</h2>
-        <div className="grid grid-cols-4 w-full gap-7 justify-items-center">
+        <div className="grid gap-y-14 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full gap-7 justify-items-center">
           <div className="cta-card">
             <img className="pb-2" src={smilepurple} alt="" />
             <h4 className="font-semibold text-lg">Lorem ipsum</h4>

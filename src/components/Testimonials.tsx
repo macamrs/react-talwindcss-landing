@@ -22,25 +22,24 @@ export const Testimonials = () => {
 
   return (
     <section className='bg-purple '>
-      <div className='container mx-auto py-[6.75rem] flex'>
+      <div className='container mx-auto py-[6.75rem] flex px-5'>
       <ArrowLeft color='#FFFFFF' previousIndex={previousIndex} />
 
         {/* slider container */}
         <div className='overflow-hidden w-full'>
           <div className='overflow-hidden max-w-full'>
-            <div className={`overflow-hidden translate-x-[${-currentIndex * 100}%]`}>
+            <div className={`overflow-hidden transition-all duration-200 ease-in translate-x-[${-currentIndex * 100}%]`}>
               {
                 testimonial.length && testimonial?.map((testimonial: any) => {
                     if(testimonial.id === currentIndex) {
                       return (
-                        <div key={testimonial.id} className='flex w-full px-16 h-full'>
-                          <img src={testimonial.img} alt={`${testimonial.userName} testimonial`} className='px-14' />
+                        <div key={testimonial.id} className='flex gap-y-6 md:gap-x-8 flex-col items-center md:flex-row w-full px-16 h-full'>
+                          <img src={testimonial.img} alt={`${testimonial.userName} testimonial`} className='px-2 w-40 md:w-[9.25rem] h-full object-cover' />
                           <div className='flex h-full flex-col gap-5'>
-                            <p className='text-white font-normal text-[1.4rem]'>{testimonial.testimony}</p>
-
+                            <p className='text-white font-normal text-[1.15rem] md:text-[1.4rem]'>{testimonial.testimony}</p>
                             <div>
-                              <h4 className='text-[1.4rem] font-bold text-white'>{testimonial.userName}</h4>
-                              <span className='text-[1.4rem] font-normal text-white italic'>{testimonial.occupation}</span>                       
+                              <h4 className='text-[1.15rem] md:text-[1.4rem] font-bold text-white'>{testimonial.userName}</h4>
+                              <span className='text-[1.15rem] md:text-[1.4rem] font-normal text-white italic'>{testimonial.occupation}</span>                       
                             </div>
                           </div>
                         </div>    

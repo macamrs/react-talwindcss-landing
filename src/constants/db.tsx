@@ -69,7 +69,7 @@ const popularTutorials = [
     contentCreatorInfo: {
       creatorImg: contentCreator,
       creatorName: 'Phillip Massey',
-      videoLenght: '12 min',
+      videoLenght: 12,
       fullStars: 4,      
     }
   },
@@ -81,7 +81,7 @@ const popularTutorials = [
     contentCreatorInfo: {
       creatorImg: contentCreator,
       creatorName: 'Phillip Massey',
-      videoLenght: '8 min',
+      videoLenght: 8,
       fullStars: 3,     
     }
   },
@@ -93,7 +93,7 @@ const popularTutorials = [
     contentCreatorInfo: {
       creatorImg: contentCreator,
       creatorName: 'Phillip Massey',
-      videoLenght: '10 min',
+      videoLenght: 10,
       fullStars: 5,    
     }
   },
@@ -105,7 +105,7 @@ const popularTutorials = [
     contentCreatorInfo: {
       creatorImg: contentCreator,
       creatorName: 'Phillip Massey',
-      videoLenght: '12 min',
+      videoLenght: 12,
       fullStars: 4      
     }
   },
@@ -117,7 +117,7 @@ const popularTutorials = [
     contentCreatorInfo: {
       creatorImg: contentCreator,
       creatorName: 'Phillip Massey',
-      videoLenght: '8 min',
+      videoLenght: 8,
       fullStars: 3,      
     }
   },
@@ -132,7 +132,7 @@ const latestVideos = [
     contentCreatorInfo: {
       creatorImg: contentCreator,
       creatorName: 'Phillip Massey',
-      videoLenght: '8 min',
+      videoLenght: 8,
       fullStars: '3'      
     }
   },
@@ -144,7 +144,7 @@ const latestVideos = [
     contentCreatorInfo: {
       creatorImg: contentCreator,
       creatorName: 'Phillip Massey',
-      videoLenght: '8 min',
+      videoLenght: 8,
       fullStars: '3'      
     }
   },
@@ -156,7 +156,7 @@ const latestVideos = [
     contentCreatorInfo: {
       creatorImg: contentCreator,
       creatorName: 'Phillip Massey',
-      videoLenght: '10 min',
+      videoLenght: 10,
       fullStars: '5'      
     }
   },
@@ -168,7 +168,7 @@ const latestVideos = [
     contentCreatorInfo: {
       creatorImg: contentCreator,
       creatorName: 'Phillip Massey',
-      videoLenght: '12 min',
+      videoLenght: 12,
       fullStars: '4'      
     }
   },
@@ -180,7 +180,7 @@ const latestVideos = [
     contentCreatorInfo: {
       creatorImg: contentCreator,
       creatorName: 'Phillip Massey',
-      videoLenght: '12 min',
+      videoLenght: 12,
       fullStars: '4'      
     }
   },

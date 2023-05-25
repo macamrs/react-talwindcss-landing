@@ -6,7 +6,7 @@ import facebook from '../assets/socials/facebook.svg';
 export const Footer = () => {
   return (
     <footer className="bg-secondary">
-      <div className="container mx-auto flex justify-between py-24">
+      <div className="container mx-auto flex flex-col items-center justify-center md:justify-between md:flex-row py-24 px-8 gap-y-8">
         <Logo />
         
         <ul className="flex gap-5">
@@ -17,7 +17,7 @@ export const Footer = () => {
       </div>
 
       <div className="container mx-auto grid place-items-center pb-10">
-        <span className="text-white opacity-80">©smileschool 2020</span>
+        <span className="text-white opacity-50">©smileschool 2020</span>
       </div>
     </footer>
   )
