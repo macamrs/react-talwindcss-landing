@@ -81,7 +81,7 @@ export const SliderComponent = ({dataAPI, arrowColor} : any) => {
                       <div className='flex justify-between items-center'>
                         <div className='flex gap-2 items-center'>
                           {[...new Array(5)].map((arr: any, index: any) => {
-                            return index < item.contentCreatorInfo.fullStars ? <img src={fullStar} className='w-4 h-4' /> : <img src={emptyStar} className='w-4 h-4' />
+                            return index < item.contentCreatorInfo.fullStars && arr ? <img src={fullStar} className='w-4 h-4' /> : <img src={emptyStar} className='w-4 h-4' />
                           })}
                         </div>  
                         <span className='font-semibold text-sm text-purple'>{`${item.contentCreatorInfo.videoLenght} min`}</span>
