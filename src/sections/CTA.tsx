@@ -1,5 +1,5 @@
 import smilepurple from "../assets/smilepurple.svg";
-import { RegisterBtn } from "./RegisterBtn";
+import { RegisterBtn } from "../components/RegisterBtn";
 import LazyLoad from 'react-lazy-load';
 
 export const CTA = () => {

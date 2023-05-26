@@ -1,4 +1,4 @@
-import { Logo } from "./Logo"
+import { Logo } from "../components/Logo"
 import instagram from '../assets/socials/instagram.svg';
 import twitter from '../assets/socials/twitter.svg';
 import facebook from '../assets/socials/facebook.svg';
