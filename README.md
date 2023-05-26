@@ -14,6 +14,10 @@ There are two types of carousels: one fully coded (testimonials) and another usi
 
 In this case the use of Tailwindcss facilitated the creation of styles, several components and texts repeat the same style so it was only necessary to create a class that extends to these components without the need to create several css files. 
 
+## Demo
+
+https://smile-school-landing.vercel.app/
+
 ## Tech Stack
 
 - React v18
@@ -24,7 +28,14 @@ In this case the use of Tailwindcss facilitated the creation of styles, several 
 - React Lazy Load Image Component
 - Framer motion
 
-## Demo
+## Responsive design 
+### Mobile
+![Captura web_26-5-2023_17352_smile-school-landing vercel app](https://github.com/macamrs/react-talwindcss-landing/assets/89083483/22e35b9f-bdd0-4f5f-bf7a-04179dd05429)
 
-https://smile-school-landing.vercel.app/
+![image](https://github.com/macamrs/react-talwindcss-landing/assets/89083483/ad78f7c6-ac62-473d-a3d6-cd0628381b1e)
 
+### Tablet
+![Captura web_26-5-2023_173440_smile-school-landing vercel app](https://github.com/macamrs/react-talwindcss-landing/assets/89083483/59128782-8a46-405c-b48a-b69638bef385)
+
+### Desktop
+![Captura web_26-5-2023_17340_smile-school-landing vercel app](https://github.com/macamrs/react-talwindcss-landing/assets/89083483/d8b3b309-029f-42a6-a97a-db28cb9df005)
