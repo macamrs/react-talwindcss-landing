@@ -1,3 +1,4 @@
+import { Loader } from "../components/Loader";
 import { SliderComponent } from "../components/SliderComponent";
 import { useEffect, useState } from 'react';
 
@@ -16,7 +17,13 @@ export const LatestVideos = () => {
     <section>
     <div className="container mx-auto py-[5.5rem]">
       <h3 className="font-light text-[2rem] leading-10 text-center pb-[4.5rem]"><span className="purple-text-highlight">Latest</span> videos</h3>
-      <SliderComponent dataAPI={latestVideos} arrowColor={'#071629'} isLoading={isLoading} />
+      <div className='min-h-[15rem]'>
+        {
+          isLoading ? <Loader /> 
+          : <SliderComponent dataAPI={latestVideos} arrowColor={'#071629'} isLoading={isLoading} />
+        }        
+      </div>
+
     </div>
   </section>
   )
