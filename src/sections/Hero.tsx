@@ -1,16 +1,14 @@
 import { RegisterBtn } from '../components/RegisterBtn';
-import LazyLoad from 'react-lazy-load';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { motion } from "framer-motion";
 import { useEffect, useState } from 'react';
 
 export const Hero = () => {
   const [prosData, setProsData] = useState([]);
-  const [isLoading, setLoading] = useState(true)
 
   useEffect(() => {
     fetch('/pros').then(res => res.json()).then(r => {
       setProsData(r.data)
-      setLoading(false);
     })
   }, [])
 
@@ -28,20 +26,25 @@ export const Hero = () => {
           <RegisterBtn />
         </div>
 
-        <div className='flex flex-col gap-[3rem] md:gap-[4.5rem]'>
+        <div className='flex flex-col gap-[3rem] md:gap-[4.5rem] min-h-[24rem]'>
           <h3 className='text-white font-light text-[2rem] text-center'><span className='purple-text-highlight'>Learn</span> from the pros</h3>
           <motion.div 
           className='grid grid-cols-2 lg:grid-cols-4 w-full gap-7 justify-items-center'
-          initial={{ y : '20%', opacity: 0}}
-          animate={{y: 0, opacity: 1}}
-          transition={{duration: 0.38, ease: 'easeIn'}}
+          initial={{ y : '22%', opacity: 0}}
+          animate={{ y : 0, opacity: 1}}
+          transition={{duration: 0.9, ease: 'easeIn'}}
           >
             { prosData?.map((pro: any) => {
               return (
               <div key={pro.id} className='pros-card'>
-                <LazyLoad width={128} height={128}>
-                  <img className='rounded-full w-32 h-full md:w-40' src={pro.img} alt={`${pro.name} profile image`} />                  
-                </LazyLoad>
+                <LazyLoadImage
+                  className='rounded-full w-32 h-full md:w-40'
+                  alt={`${pro.name} profile image`} 
+                  src={pro.img}
+                  width={128} 
+                  height={128}
+                  visibleByDefault={true}
+                  />
                 <h4 className='text-base md:text-lg font-black text-white'>{pro.name}</h4>
                 <p className='text-sm md:text-base font-normal italic text-white'>{pro.award}</p>
                 <span className='text-sm md:text-base font-normal italic text-white'>{pro.year}</span>
