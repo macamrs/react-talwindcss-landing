@@ -16,9 +16,19 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+@font-face {
+  font-family: 'Source Sans Pro Regular';
+  src: url('./assets/fonts/sans-pro/SourceSansPro-Regular.otf') format('otf');
+}
+
+/* Calling react-slick classes */
 .slick-slider {
   display: flex !important; 
   z-index: 0 !important;
+}
+
+.slick-list {
+  width: 100%;
 }
 
 @layer components {
@@ -29,7 +39,7 @@ body {
 
   /* Videos cards */
   .video-card_container {
-    @apply bg-white h-full w-6 max-w-full px-8 py-4;
+    @apply bg-white h-full px-8 py-4;
   }
 
   .video-card_text {

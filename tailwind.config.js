@@ -12,7 +12,9 @@ export default {
       backgroundImage: {
         "hero-section": "url('./assets/hero.png')",
       },
-      fontFamily: {},
+      fontFamily: {
+        "sans-pro-regular": "Source Sans Pro Regular",
+      },
     },
   },
   plugins: [],

@@ -1,14 +1,14 @@
 import Slider from 'react-slick';
-import { ArrowRight } from './ArrowRight';
-import { ArrowLeft } from './ArrowLeft';
+import { ArrowRight } from '../components/ArrowRight';
+import { ArrowLeft } from '../components/ArrowLeft';
 import fullStar from '../assets/full-star.svg';
 import emptyStar from '../assets/empty-star.svg';
 import playBtn from '../assets/play.svg';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import LazyLoad from 'react-lazy-load';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-export const SliderComponent = ({dataAPI, arrowColor, isLoading} : any) => {
+export const SliderComponent = ({dataAPI, arrowColor} : any) => {
   const NextArrow = (props : any) => {
     const { onClick } = props;
     return <ArrowRight nextIndex={onClick} color={arrowColor} />;
@@ -63,15 +63,21 @@ export const SliderComponent = ({dataAPI, arrowColor, isLoading} : any) => {
   return (
     <div className='px-2'>
       <Slider {...settings}>
-      {
-           !isLoading && dataAPI?.map((item : any) => {
+        {
+           dataAPI?.map((item : any) => {
               return (
                 <div key={item.id} className='video-card_container'>
                   <div className='shadow rounded-md hover:shadow-lg transition-all ease-in duration-100'>
-                    <div>
-                      <LazyLoad>
-                        <img className='rounded-t-md w-full' src={item.video} alt={`${item.videoTitle} video thumbnail`} />
-                      </LazyLoad>                      
+                    <div className='relative'>
+                    <LazyLoadImage
+                      className='rounded-t-md w-full min-h-[9.5rem]'
+                      alt={`${item.videoTitle} video thumbnail`}
+                      src={item.video}
+                      visibleByDefault={true}
+                      width={'100%'}
+                      height={'100%'}
+                      />
+                      <img className='rounded-full shadow-md w-14 h-14 md:w-16 md:h-16 absolute top-[12%] left-[25%] translate-x-2/4 translate-y-2/4' src={playBtn} alt='Play Button' />
                     </div>
 
                     <div className='video-card_text flex flex-col gap-2'>
@@ -79,15 +85,20 @@ export const SliderComponent = ({dataAPI, arrowColor, isLoading} : any) => {
                       <p className="font-normal text-sm text-secondary opacity-50">{item.videoDescription}</p>
                       <div className='pt-2'>
                         <div className='flex gap-3 items-center pb-[0.875rem]'>
-                          <LazyLoad width={30} height={30}>
-                            <img className='rounded-full' src={item.contentCreatorInfo.creatorImg} alt={`Profile image of ${item.contentCreatorInfo.creatorName}`} />                            
-                          </LazyLoad>
+                        <LazyLoadImage
+                          className='rounded-full' 
+                          alt={`Profile image of ${item.contentCreatorInfo.creatorName}`}
+                          src={item.contentCreatorInfo.creatorImg}
+                          visibleByDefault={true}
+                          width={30}
+                          height={30}
+                          />
                           <h5 className='font-semibold text-sm text-purple'>{item.contentCreatorInfo.creatorName}</h5>                        
                         </div>
                       <div className='flex justify-between items-center'>
                         <div className='flex gap-2 items-center'>
                           {[...new Array(5)].map((arr: any, index: any) => {
-                            return index < item.contentCreatorInfo.fullStars && arr ? <img key={index} src={fullStar} className='w-4 h-4' /> : <img key={index}  src={emptyStar} className='w-4 h-4' />
+                            return index < item.contentCreatorInfo.fullStars || arr ? <img key={index} src={fullStar} className='w-4 h-4' /> : <img key={index}  src={emptyStar} className='w-4 h-4' />
                           })}
                         </div>  
                         <span className='font-semibold text-sm text-purple'>{`${item.contentCreatorInfo.videoLenght} min`}</span>
