@@ -1,5 +1,4 @@
 import { createServer } from "miragejs"
-
 import pro1 from '../assets/pros/pro1.svg';
 import pro2 from '../assets/pros/pro2.svg';
 import pro3 from '../assets/pros/pro3.svg';
@@ -76,45 +75,31 @@ export function makeMockServer() {
                  [
                     {
                         id: 1,
-                        img: testimony1,
-                        testimony: '« Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun! »',
-                        userName: 'Person Name',
-                        occupation: 'Weather presenter'
+                        img: pro1,
+                        name: "Phillip Massey",
+                        award: "« Smile of the year »",
+                        year: "2018 - 2019",
                     },
                     {
                         id: 2,
-                        img: testimony2,
-                        testimony: '« Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun! »',
-                        userName: 'Person Name',
-                        occupation: 'Entrepreneur'
+                        img: pro2,
+                        name: "Nannie Lawrence",
+                        award: "Best « little smile »",
+                        year: "2017",
                     },
                     {
                         id: 3,
-                        img: testimony3,
-                        testimony: '« Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun! »',
-                        userName: 'Person Name',
-                        occupation: 'Web developer'
+                        img: pro3,
+                        name: "Bruce Walters",
+                        award: "Best « Friend Smile »",
+                        year: "live performance 2019",
                     },
                     {
                         id: 4,
-                        img: testimony1,
-                        testimony: '« Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun! »',
-                        userName: 'Person Name',
-                        occupation: 'Web developer'
-                    },
-                    {
-                        id: 5,
-                        img: testimony2,
-                        testimony: '« Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun! »',
-                        userName: 'Person Name',
-                        occupation: 'Web developer'
-                    },
-                    {
-                        id: 6,
-                        img: testimony3,
-                        testimony: '« Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun! »',
-                        userName: 'Person Name',
-                        occupation: 'Web developer'
+                        img: pro4,
+                        name: "Henry Hughes",
+                        award: "« 24h smiles » winner ",
+                        year: "2016 - 2019",
                     },
                 ],
             }
@@ -125,47 +110,65 @@ export function makeMockServer() {
                  [
                     {
                         id: 1,
-                        img: testimony1,
-                        testimony: '« Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun! »',
-                        userName: 'Person Name',
-                        occupation: 'Weather presenter'
+                        video: video5,
+                        videoTitle: 'Inverted Smile',
+                        videoDescription: 'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.',
+                        contentCreatorInfo: {
+                        creatorImg: contentCreator,
+                        creatorName: 'Phillip Massey',
+                        videoLenght: 8,
+                        fullStars: '3'      
+                        }
                     },
                     {
                         id: 2,
-                        img: testimony2,
-                        testimony: '« Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun! »',
-                        userName: 'Person Name',
-                        occupation: 'Entrepreneur'
+                        video: video2,
+                        videoTitle: 'Sad Smile',
+                        videoDescription: 'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.',
+                        contentCreatorInfo: {
+                        creatorImg: contentCreator,
+                        creatorName: 'Phillip Massey',
+                        videoLenght: 8,
+                        fullStars: '3'      
+                        }
                     },
                     {
                         id: 3,
-                        img: testimony3,
-                        testimony: '« Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun! »',
-                        userName: 'Person Name',
-                        occupation: 'Web developer'
+                        video: video3,
+                        videoTitle: 'Natural Smile',
+                        videoDescription: 'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.',
+                        contentCreatorInfo: {
+                        creatorImg: contentCreator,
+                        creatorName: 'Phillip Massey',
+                        videoLenght: 10,
+                        fullStars: '5'      
+                        }
                     },
                     {
                         id: 4,
-                        img: testimony1,
-                        testimony: '« Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun! »',
-                        userName: 'Person Name',
-                        occupation: 'Web developer'
+                        video: video4,
+                        videoTitle: 'Happy Smile',
+                        videoDescription: 'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.',
+                        contentCreatorInfo: {
+                        creatorImg: contentCreator,
+                        creatorName: 'Phillip Massey',
+                        videoLenght: 12,
+                        fullStars: '4'      
+                        }
                     },
                     {
                         id: 5,
-                        img: testimony2,
-                        testimony: '« Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun! »',
-                        userName: 'Person Name',
-                        occupation: 'Web developer'
-                    },
-                    {
-                        id: 6,
-                        img: testimony3,
-                        testimony: '« Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun! »',
-                        userName: 'Person Name',
-                        occupation: 'Web developer'
-                    },
-                ],
+                        video: video1,
+                        videoTitle: 'Diagonal Smile',
+                        videoDescription: 'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.',
+                        contentCreatorInfo: {
+                        creatorImg: contentCreator,
+                        creatorName: 'Phillip Massey',
+                        videoLenght: 12,
+                        fullStars: '4'      
+                        },
+                    }
+                ]
             }
         }),
         this.get('/popular-videos', () => {
@@ -174,46 +177,64 @@ export function makeMockServer() {
                  [
                     {
                         id: 1,
-                        img: testimony1,
-                        testimony: '« Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun! »',
-                        userName: 'Person Name',
-                        occupation: 'Weather presenter'
-                    },
-                    {
+                        video: video1,
+                        videoTitle: 'Diagonal Smile',
+                        videoDescription: 'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.',
+                        contentCreatorInfo: {
+                          creatorImg: contentCreator,
+                          creatorName: 'Phillip Massey',
+                          videoLenght: 12,
+                          fullStars: 4,      
+                        }
+                      },
+                      {
                         id: 2,
-                        img: testimony2,
-                        testimony: '« Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun! »',
-                        userName: 'Person Name',
-                        occupation: 'Entrepreneur'
-                    },
-                    {
+                        video: video2,
+                        videoTitle: 'Sad Smile',
+                        videoDescription: 'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.',
+                        contentCreatorInfo: {
+                          creatorImg: contentCreator,
+                          creatorName: 'Phillip Massey',
+                          videoLenght: 8,
+                          fullStars: 3,     
+                        }
+                      },
+                      {
                         id: 3,
-                        img: testimony3,
-                        testimony: '« Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun! »',
-                        userName: 'Person Name',
-                        occupation: 'Web developer'
-                    },
-                    {
+                        video: video3,
+                        videoTitle: 'Natural Smile',
+                        videoDescription: 'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.',
+                        contentCreatorInfo: {
+                          creatorImg: contentCreator,
+                          creatorName: 'Phillip Massey',
+                          videoLenght: 10,
+                          fullStars: 5,    
+                        }
+                      },
+                      {
                         id: 4,
-                        img: testimony1,
-                        testimony: '« Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun! »',
-                        userName: 'Person Name',
-                        occupation: 'Web developer'
-                    },
-                    {
+                        video: video4,
+                        videoTitle: 'Happy Smile',
+                        videoDescription: 'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.',
+                        contentCreatorInfo: {
+                          creatorImg: contentCreator,
+                          creatorName: 'Phillip Massey',
+                          videoLenght: 12,
+                          fullStars: 4      
+                        }
+                      },
+                      {
                         id: 5,
-                        img: testimony2,
-                        testimony: '« Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun! »',
-                        userName: 'Person Name',
-                        occupation: 'Web developer'
-                    },
-                    {
-                        id: 6,
-                        img: testimony3,
-                        testimony: '« Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun! »',
-                        userName: 'Person Name',
-                        occupation: 'Web developer'
-                    },
+                        video: video5,
+                        videoTitle: 'Inverted Smile',
+                        videoDescription: 'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.',
+                        contentCreatorInfo: {
+                          creatorImg: contentCreator,
+                          creatorName: 'Phillip Massey',
+                          videoLenght: 8,
+                          fullStars: 3,      
+                        }
+                      },
                 ],
             }
         })
